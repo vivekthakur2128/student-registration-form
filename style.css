@@ -1,0 +1,7 @@
+body{
+    font-family: cursive;
+}
+form input{
+    background-color: rgb(81, 78, 78) !important;
+    color: antiquewhite !important;
+}
