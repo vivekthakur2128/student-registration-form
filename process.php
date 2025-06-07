@@ -19,11 +19,10 @@ $roll_no = $_POST['rollNo'];
 $course = $_POST['course'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$password = $_POST['password'];
 
 // Prepare and bind
-$stmt = $conn->prepare("INSERT INTO users (name, roll_no, course, email, phone, password) VALUES (?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssss", $name, $roll_no, $course, $email, $phone, $password);
+$stmt = $conn->prepare("INSERT INTO users (name, roll_no, course, email, phone) VALUES (?, ?, ?, ?, ?)");
+$stmt->bind_param("sssss", $name, $roll_no, $course, $email, $phone);
 
 // Execute the statement
 if ($stmt->execute()) {
